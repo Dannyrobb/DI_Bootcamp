@@ -30,7 +30,7 @@ body{
     height:1000px;
     width:900px;
     position: absolute;
-    right:0;
+    right:60px;
     top:0;
 }
 img{
@@ -72,9 +72,23 @@ ul{
 li{
     line-height: 1.8;
     
+    
 }
 
 .contactInfo{
     margin-left: 45px;
     margin-top: 40px;
+    color:white;
+    
+}
+.fa-solid{
+    color: rgb(54, 54, 145);
+    margin-right: 6px;
+}
+.fa-brands{
+    color:rgb(54, 54, 145);
+    margin-right: 6px;
+}
+h3{
+    padding-bottom: 12px;
 }
