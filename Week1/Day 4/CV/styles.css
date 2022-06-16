@@ -1,22 +1,22 @@
-*{
+
+html, body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cardo', serif;
 }
+
 body{
     background-color: rgb(51, 140, 140);
-    height:100vh;
-    
     
 }
 .container{
-    height: 1200px;
-    width: 1400px;
+    height: 80vh;
+    width: 90vw;
     margin-left: auto;
     margin-right:auto;
     position:relative;
-    margin-top: 30px;
+    margin-top: 5vh;
     
     
 }
@@ -25,6 +25,7 @@ body{
     height:1200px;
     width:500px;
     position: relative;
+    overflow-x: hidden ;
 }
 .rightSide{
     background-color: white;
@@ -120,7 +121,7 @@ p{
     width:750px;
 }
 
-.footer {
+footer {
     position: fixed;
     left: 60px;
     bottom: 0;
@@ -129,4 +130,7 @@ p{
     background-color: rgb(121, 121, 121);
     color: white;
     text-align: center;
+}
+#lorem{
+    width:100%;
 }
