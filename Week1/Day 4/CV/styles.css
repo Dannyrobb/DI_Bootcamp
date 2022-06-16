@@ -6,8 +6,8 @@
 }
 body{
     background-color: rgb(51, 140, 140);
-    min-height:100vh;
-    position:relative;
+    height:100vh;
+    
     
 }
 .container{
@@ -44,7 +44,7 @@ img{
     
 }
 .nameNpic{
-margin-left:70px;
+margin-left:40px;
 width:900px;
 
 
@@ -118,4 +118,15 @@ p{
 }
 .profileContainer{
     width:750px;
+}
+
+.footer {
+    position: fixed;
+    left: 60px;
+    bottom: 0;
+    width: 1340px;
+    height: 40px;
+    background-color: rgb(121, 121, 121);
+    color: white;
+    text-align: center;
 }
