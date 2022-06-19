@@ -1,0 +1,120 @@
+html, body{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    
+}
+
+nav{
+background-color: black;
+height: 10vh;
+
+
+}
+
+body{
+    background-image: url("background.jpg");
+    height:85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+footer{
+    background-color: black;
+    height:5vh;
+}
+.name{
+    color:white;
+    text-align: center;
+}
+.links{
+    position: relative;
+    left: 36vw;
+    top: 3vh;
+    color:white;
+    display:inline-block;
+    
+   
+    
+    
+}
+.products{
+    margin-right: 2vw;
+    text-decoration: none;
+    color:white;
+    
+}
+.register{
+    margin-right: 2vw;
+    text-decoration: none;
+    color:white;
+
+}
+.login{
+    text-decoration: none;
+    color:white;
+}
+
+.cart{
+    color:white;
+    position:relative;
+    left: 3vw;
+    top: 4vh;
+    font-size: larger;
+    display:inline-block;
+    
+}
+.container {
+    padding: 16px;
+    width: 50vw;
+    margin-left: 25vw;
+  }
+  
+  
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  
+  hr {
+    border: 1px solid #f1f1f1;
+    margin:25px;
+  }
+  
+  
+  .registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+    opacity:1;
+  }
+  
+  
+  a {
+    color: dodgerblue;
+  }
+  
+  
+  .signin {
+    text-align: center;
+    background-color: none;
+    padding:0;
+  }
+  

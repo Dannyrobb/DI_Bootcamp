@@ -24,6 +24,7 @@ main{
 footer{
     background-color: black;
     height: 8vh;
+   
 }
 
 .name{
@@ -34,7 +35,7 @@ footer{
 .links{
     position: relative;
     left: 31vw;
-    top: 3vh;
+    top: 3.5vh;
     color:white;
     display:inline-block;
 
@@ -76,9 +77,12 @@ h1{
     position: relative;
     margin-top:5vh;
     display:block;
-    padding:0;
+    padding-bottom:3vh;
     margin-left: 30vw;
-   
+    transition: transform .4s;
+}
+.card:hover{
+    transform: scale(1.2);
 }
 .topCard{
     width:100%;
@@ -88,7 +92,6 @@ h1{
 img{
     width:100%;
     height: 100%;
-
     border-radius: 20px;
 }
 .bottomCard{
@@ -117,3 +120,23 @@ button{
     border: grey;
     background-color: rgb(212, 198, 198);
 }
+button:hover{
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 601px) {
+    .card {
+      display:inline-block;
+      width: 240px;
+      height: 310px;
+      margin-left: 6vw;
+      
+      
+    }
+}
+@media only screen and (min-width: 909px) {
+     .links{
+        left:36vw;
+     
+    }
+  }
