@@ -12,7 +12,7 @@ height: 10vh;
 
 main{
     background-image: url("background.jpg");
-    height:85vh;
+    min-height:85vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
