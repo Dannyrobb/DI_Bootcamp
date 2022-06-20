@@ -67,7 +67,8 @@ p{
     display:flex;
     flex-direction: column;
     position: relative;
-    box-shadow: 3px;
+    
+    
 }
 #box1{
     /* border:1px solid blue; */
@@ -118,5 +119,74 @@ background-color: rgb(19, 115, 211);
 }
 #bottom3{
     background-color: rgb(7, 205, 169);
+}
+@media only screen and (max-width: 900px){
+    .reviewsContainer{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height:100%;
+    }
+    #box1{
+        align-self: center;
+        width:500px;
+        height:320px;
+        margin-top:3vh;
+    }
+    #box2{
+        align-self: center;
+        width:500px;
+        height:320px;
+        margin-top:3vh;
+    }
+    #box3{
+        align-self: center;
+        width:500px;
+        height:320px;
+    }
+    .lorem{
+        font-size: 100%;
+    }
+      
+}
+@media only screen and (max-width: 750px){
+    .welcome{
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+        
+    }
+    h1{
+        font-size: 120%;
+    }
+    h2{
+        font-size: 4vw;
+    }
+    .statInfo{
+        font-size: 2vw;
+    }
+    
+}
+@media only screen and (max-width:500px){
+    #box1{
+        width:100vw;
+        
+    }
+    #box2{
+        width:100vw;
+        
+    }
+    #box3{
+        width:100vw;
+        
+    }
+    h1{
+        font-size: 110%;
+    }
+    .stat{
+        width:30vw;
+
+    }
 }
     
