@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>Grid</title>
+</head>
+<body>
+    <header>
+        <h1>UNBURDEN YOURSELF FROM THE WEIGHT OF EMAIL OVERLOAD!</h1>
+        <button type="button"><a href="#">LEARN HOW</a></button>
+    </header>
+    <h2> DOWNLOAD NOW</h2>
+    <main>
+        <form>
+            <div class="nameDiv">
+                <label for="firstName">FIRST NAME*</label>
+                <input type="text" id="firstName" name="firstName">
+            </div>
+            <div class="lastNameDiv">
+                <label for="lastName"> LAST NAME*</label>
+                <input type="text" id="lastName" name="lastName">
+            </div>
+            <div class="emailDiv">
+                <label for="email"> EMAIL*</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="phoneDiv">  
+                <label for="phone"> PHONE NUMBER*</label>
+                <input type="tel" id="phone" name="phone">
+            </div> 
+            <div class="urlDiv">
+                <label for="webUrl"> WEBSITE URL*</label>
+                <input type="text" id="webUrl" name="webUrl">
+            </div>
+            <div class="companyDiv">
+                <label for="company"> COMPANY NAME*</label>
+                <input type="text" id="company" name="company">
+            </div>
+            <div class="employeesDiv">
+                <label for="employees">HOW MANY EMPLOYEES WORK THERE?*</label>
+                <select id="employees" name="employees">
+                <option value="50"> 1-49</option>
+                <option value="99">50-99</option>
+                <option value="199">100-199</option>
+                <option value="499">200-499</option>
+                <option value="500">500+</option>
+                </select>
+            </div>
+            <div class="servicesDiv">   
+                <label for="services">
+                <ul>
+                    <h3>DOES YOUR COMPANY SELL ANY OF THE FOLLOWING SERVICES?*</h3>
+                    <li>WEB DESIGN</li>
+                    <li>ONLINE MARKETING</li>
+                    <li> SEO/SEM</li>
+                    <li>ADVERTISING AGENCY SERVICES*</li>
+                </ul>
+                </label>    
+                <select id="services" name="services">
+                <option value="webDes">WEB DESIGN</option>
+                <option value="marketing">ONLINE MARKETING</option>
+                <option value="seo">SEO/SEM</option>
+                <option value="avertising">ADVERTISING AGENCY SERVICES</option>
+                </select>
+            </div>
+            <div class="subscribeDiv">
+                <input type="checkbox" id="subscribe" name="subscribe" >
+                <label for="subscribe">SUBSCRIBE TO HUBSPOT'S MARKETING BLOG</label>
+            </div>
+            <div class ="dlBtn">
+             <input type="submit" value="DOWNLOAD">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
