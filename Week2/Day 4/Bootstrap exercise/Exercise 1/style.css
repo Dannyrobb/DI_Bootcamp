@@ -1,0 +1,10 @@
+label{
+    color:white;
+}
+.cards{
+    display:flex;
+    direction: row;
+    justify-content: center;
+    width:100vw;
+    
+}

@@ -100,6 +100,7 @@ p{
     /* border:1px solid black; */
     display: flex;
     justify-content: center;
+    border-radius: 10px;
     
 
 }
@@ -110,6 +111,7 @@ img{
     bottom:32%;
     width:50px;
     height:50px;
+    border-radius: 50%;
 }
 #bottom1{
     background-color: salmon;
