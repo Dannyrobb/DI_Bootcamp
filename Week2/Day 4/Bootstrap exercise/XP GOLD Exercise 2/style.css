@@ -1,0 +1,51 @@
+html, body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+a.navbar-brand{
+    padding-left: 3vw;
+    color:white;
+}
+
+nav .navbar-nav a{
+    color: white !important;
+    }
+
+.top{
+    background-image: url("./background/img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    background-attachment: fixed;
+}
+.jumbotron{
+    color:white;
+    text-align: center;
+    width:60vw;
+    margin:auto;
+    margin-top:5vh;
+    
+}
+.btn{
+    margin:2px;
+}
+
+.navbar-toggler{
+    color:white;
+} 
+p.lead{
+    
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 992px){
+    
+    #navbarNavAltMarkup{
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 6vw;
+    }
+}
