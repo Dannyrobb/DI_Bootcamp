@@ -9,4 +9,4 @@ console.log(fruits);
 
 //Exercise 2
 let moreFruits = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
-console.log(moreFruits[3][0]);
+console.log(moreFruits[1][1]);
