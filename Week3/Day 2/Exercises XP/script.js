@@ -14,8 +14,9 @@ myWatchedSeries[2] = "friends";
 myWatchedSeries.push("the boys");
 myWatchedSeries.unshift("southpark");
 myWatchedSeries.splice(1,1);
-//**
-console.log(myWatchedSeries);
+console.log(myWatchedSeries[1][2])
+
+
 //Exercise 3
 let tempC= 30
 let tempF= tempC * 9 / 5 + 32;
