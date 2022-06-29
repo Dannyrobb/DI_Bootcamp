@@ -14,7 +14,7 @@ myWatchedSeries[2] = "friends";
 myWatchedSeries.push("the boys");
 myWatchedSeries.unshift("southpark");
 myWatchedSeries.splice(1,1);
-console.log(myWatchedSeries[1][2])
+console.log(myWatchedSeries[1][2]);
 
 
 //Exercise 3
@@ -43,7 +43,7 @@ console.log(a+b) //2. second expression
 console.log(3 + 4 + '5');
 //Outcome will be 75. A number thats a string gets placed nexto the previous number without being calculated.
 
-//Exercise 5
+//Exercise 5=
 console.log(typeof(15))
 // Prediction: number -numbers are numbers unless they are strings.
 // Actual:number
@@ -55,7 +55,7 @@ console.log(typeof(NaN))
 // Prediction:number - NaN is a numeric type.
 // Actual:number
 
-console.log(typeof("hello"))
+console.log(typeof(hello))
 // Prediction:string paranthesis is string.
 // Actual:string
 
@@ -126,7 +126,7 @@ console.log(5 % 10)
 
 console.log("Java" + "Script")
 // Prediction:JavaScript Strings no space add together
-// Actual:Javascript
+// Actual:JavaScript
 
 console.log(" " + " ")
 // Prediction:"  "    String...
