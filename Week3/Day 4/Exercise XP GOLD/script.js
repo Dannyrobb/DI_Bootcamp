@@ -32,16 +32,11 @@ let userGrade = Number(prompt("Hello user. Please insert your numeric grade:"));
 //Exercise 3
 let verb = prompt("Please write one verb");
 switch(true){
-    case verb.length> 2:
-    case verb.indexOf("ing")=== -1:
+    case verb.length > 2 && verb.indexOf("ing")=== -1:
         console.log(`${verb}ing`);
     break;
-    case verb.length>2:
-    case verb.indexOf("ing") !==-1:
+    case verb.length > 2 && verb.indexOf("ing") !==-1:
         console.log(`${verb}ly`);
-    break;
-    default:
-        console.log(verb);
 
     
 }
