@@ -10,7 +10,7 @@ for (i=1; i<=rows ; i++){
 
 let output2= "";
 for (let i=1; i<=5; i++){
-    for (let j=1; j<=1; j++){
+    for (let i2=1; i2<=1; i2++){
         output2 = (`${output2}*`);
         console.log(output2)
     }
