@@ -76,27 +76,36 @@
 // console.log(result);
 
 //Exercise 5
-let changeEnough=(itemPrice, amountOfChange) =>{
-    let sum = 0;
-    for (let i = 0; i<amountOfChange.length;i++){
-        switch(i){
-            case 0: amountOfChange[i] * 0.25
-            break;
-            case 1: amountOfChange[i] * 0.1
-            break;
-            case 2: amountOfChange[i] *0.05
-            break;
-            case i===3: amountOfChange[i] *0.01
-        }
-    }
-    for (let i=0;i<amountOfChange.length;i++){
-        sum += amountOfChange[i];
-    }
-    if (itemPrice < sum) {return true}
-    else{return false};
+//?????
+
+//Exercise 6
+let hotelCost= ()=> {
+let nights;
+do {
+    nights = Number(prompt("How many nights would you like to stay in the hotel?"))} 
+while (typeof nights !== 'number' || isNaN(nights));
+    return (nights * 140) 
     
 }
-console.log(changeEnough(20,[79,0,0,0]));
+let totalPrice= hotelCost()  
+console.log(totalPrice);
+
+// let planeRideCost=() =>{
+//     let destination= prompt("What is your destination?");
+//     destination= destination.toLowerCase;
+//     switch (destination){
+//         case "london": return "183$";
+//         case "paris": return "220$";
+//         default: return "300$";
+        
+//     }
+//     let finalCost= planeRideCost()
+// }    
+//     planeRideCost()
+
+   
+
+
 
 
 
