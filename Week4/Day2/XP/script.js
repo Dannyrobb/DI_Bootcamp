@@ -76,19 +76,31 @@
 // console.log(result);
 
 //Exercise 5
-//?????
+// let changeEnough = (itemPrice, amountOfChange)=>{
+//     let canOrCannot=itemPrice
+//     let vals=[.25, .1, .05, .01]
+//     for (let index=0; index<amountOfChange.length;index++){
+//         const element= amountOfChange[index] * vals[index];
+//         canOrCannot-=element
+//         if(canOrCannot < 0)return true
+//     }
+//     return false
+
+// }
 
 //Exercise 6
-let hotelCost= ()=> {
-let nights;
-do {
-    nights = Number(prompt("How many nights would you like to stay in the hotel?"))} 
-while (typeof nights !== 'number' || isNaN(nights));
-    return (nights * 140) 
-    
-}
-let totalPrice= hotelCost()  
-console.log(totalPrice);
+// let hotelCost= ()=> {
+//     let viableInput
+//     let nights
+//     do{
+//         nights=prompt("How many nights?")
+//         console.log (isNaN(Number(nights)))
+//         viableInput= isNaN(Number(numNight))?true: nights === ""
+//     }
+//     while(!viableInput)
+//     return 140* Number(numNight)
+//     }
+
 
 // let planeRideCost=() =>{
 //     let destination= prompt("What is your destination?");
