@@ -1,0 +1,34 @@
+let planetArr= ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune" ]
+planetArr[0] = document.createElement("div");
+planetArr[0].className= "planet";
+planetArr[0].style.backgroundColor = "blue";
+document.body.appendChild(planetArr[0]);
+planetArr[1] = document.createElement("div");
+planetArr[1].className= "planet";
+planetArr[1].style.backgroundColor = "yellow";
+document.body.appendChild(planetArr[1]);
+planetArr[2] = document.createElement("div");
+planetArr[2].className= "planet";
+planetArr[2].style.backgroundColor = "green";
+document.body.appendChild(planetArr[2]);
+planetArr[3] = document.createElement("div");
+planetArr[3].className= "planet";
+planetArr[3].style.backgroundColor = "pink";
+document.body.appendChild(planetArr[3]);
+planetArr[4] = document.createElement("div");
+planetArr[4].className= "planet";
+planetArr[4].style.backgroundColor = "purple";
+document.body.appendChild(planetArr[4]);
+planetArr[5] = document.createElement("div");
+planetArr[5].className= "planet";
+planetArr[5].style.backgroundColor = "white";
+document.body.appendChild(planetArr[5]);
+planetArr[67] = document.createElement("div");
+planetArr[67].className= "planet";
+planetArr[67].style.backgroundColor = "orange";
+document.body.appendChild(planetArr[67]);
+planetArr[7] = document.createElement("div");
+planetArr[7].className= "planet";
+planetArr[7].style.backgroundColor = "grey";
+document.body.appendChild(planetArr[7]);
+

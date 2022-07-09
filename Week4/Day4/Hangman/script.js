@@ -38,20 +38,23 @@ while (incorrectGuesses < 10 && stars !== secret) {
     
     // At this point continuously prompt player 2 for a letter.
     let guess = userGuess();
-    guessArr.push(guess);
-    console.log(`Already used: ${guessArr}`); 
-    if (secret.indexOf(guess)> -1 ) {
-        stars = getStars(stars, secret, guess) 
-        console.log(stars);
-        if (stars === secret) {
-            console.log("WE HAVE A WINNNERRRRRR!!!!!!");  
-        }
-    } else {
-        incorrectGuesses++;
-        if (incorrectGuesses === 10) {
-            console.log("You lose!")
-        }
-    }   
+    if (guessArr.includes(guess) && guessArr.length > 0){
+        console.log(`You already used":${guess}`)
+    }else{
+        guessArr.push(guess);
+        if (secret.indexOf(guess)> -1 ) {
+            stars = getStars(stars, secret, guess) 
+            console.log(stars);
+            if (stars === secret) {
+                console.log("WE HAVE A WINNNERRRRRR!!!!!!");  
+            }
+        } else {
+            incorrectGuesses++;
+            if (incorrectGuesses === 10) {
+                console.log("You lose!")
+            }
+        }   
+    }
 }
 
 
