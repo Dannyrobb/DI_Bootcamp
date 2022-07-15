@@ -25,13 +25,19 @@ let inputsByName=document.getElementsByName("fname")
 console.log(inputsByName)
 let inputsByName2=document.getElementsByName("lname")
 console.log(inputsByName2)
-//after many attempts, hours, could not push the input value to li.
 let ul=document.querySelector("ul");
-form.addEventListener("submit", (e)=>{
-e.preventDefault()
-let form= e.target
-let inputs=form.querySelectorAll("input")
-console.log(inputs)
-inputs.forEach(input=>
-    console.log(input.value))
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    let fname= form.fname.value;
+    let lname= form.lname.value;
+    li1= document.createElement("li")
+    li1.innerText=fname;
+    li2= document.createElement("li")
+    li2.innerText=lname;
+    ul.append(li1);
+    ul.append(li2);
+    form.lname.value= '';
+    form.fname.value= '';
 })
+
+
