@@ -32,7 +32,7 @@
 // }
 // colorChoices()
 
-//Exercise 5 // exercise Failed
+//Exercise 5 
 let color = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
 let ordinal = ["th","st","nd","rd"];
 function colorChoice(colorsArray, ordinalsArray) {
