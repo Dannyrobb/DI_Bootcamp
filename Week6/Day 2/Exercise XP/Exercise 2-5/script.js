@@ -35,9 +35,15 @@
 //Exercise 5 // exercise Failed
 let color = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
 let ordinal = ["th","st","nd","rd"];
+function colorChoice(colorsArray, ordinalsArray) {
+    colorsArray.forEach((element, index) => {
+        const humanIndex = index+1;
+        const ordinal=ordinalGetter(humanIndex, ordinalsArray)
+        console.log(`${humanIndex}${ordinal} choice is ${element}`)
+    });
+}
 
-colorRate = () => {
-    for(let i=1; i<color.length; i++){
-        i===1 ? console.log(`${i+ordinal[1]}`) 
-    }
+function ordinalGetter(index, ordinalsArray) {
+const ordinal = (index<3) ? ordinalsArray[index]:ordinalsArray[0];
+return ordinal;
 }
