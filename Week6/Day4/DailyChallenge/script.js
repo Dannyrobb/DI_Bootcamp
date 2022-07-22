@@ -1,11 +1,11 @@
-let client = "Betty";
+let client = "John";
 
 let groceries = {
     fruits : ["pear", "apple", "banana"],
     vegetables: ["tomatoes", "cucumber", "salad"],
-    totalPrice : "35$",
+    totalPrice : "20$",
     other : {
-        payed : false,
+        payed : true,
         meansOfPayment : ["cash", "creditCard"]
     }
 }
@@ -17,15 +17,12 @@ displayGroceries()
 
 let cloneGroceries= () => {
     let user=client
-    let shopping=groceries
+    client='Betty'
+    console.log(user)
+    let shopping=groceries;
+    groceries.totalPrice="35"
+    groceries.other.payed=false;
     console.log(shopping)
 }
 cloneGroceries()
-// We will see that if we run the function after client has been changed user changes too,
- //when you run the function it fetches clients definition from the global scope.
- 
- //When changing totalPrice we will see it change in shopping too.
- // With Objects- when saving it to another variable it refrences the
- //place in memory.
- 
- 
+//When i want to make a value equal to a primitive data type that value has no longer connection the variable.
