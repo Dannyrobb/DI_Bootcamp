@@ -1,8 +1,15 @@
 let quotesArray = [
   {
+    id: 100,
+    author: "Adane",
+    quote: "Danny you are doing great!!! , see the comment in the prevBtn function",
+    likes: 0,
+
+  },
+  {
     id: 0,
     author: "Oscar Wild",
-    quote: "Be yourself; everyone else is already taken",
+    quote: "Be yourself;  everyone else is already taken",
     likes: 0,
   },
   {
@@ -151,7 +158,15 @@ prevBtn.addEventListener("click", () => {
   const nestedP = document.querySelector("#p2");
   nestedP.innerText = results[resultIndex];
   resultIndex--;
+  console.log(resultIndex);
   if (resultIndex === -1) {
-    resultIndex = results.length;
+    //if an array has 
+    // let arr = [1,2,3]
+    //then to reach the last index we need to write 
+    // arr.length-1  which gives us the last index in the array.
+    //so insted of writing : resultIndex = results.length 
+    //we will write :
+
+    resultIndex = results.length - 1;
   }
 });
