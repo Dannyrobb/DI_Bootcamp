@@ -152,6 +152,6 @@ prevBtn.addEventListener("click", () => {
   nestedP.innerText = results[resultIndex];
   resultIndex--;
   if (resultIndex === -1) {
-    resultIndex = results.length;
+    resultIndex = results.length - 1;
   }
 });
