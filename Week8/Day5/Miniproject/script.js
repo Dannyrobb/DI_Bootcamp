@@ -1,6 +1,7 @@
 const form = document.forms[0];
 const cardDiv = document.querySelector("#cardContainer");
-form.addEventListener("submit", search);
+let cities = [];
+let unit = "metric";
 function search(e) {
   e.preventDefault();
   let cityVal = form.search.value;
@@ -16,10 +17,15 @@ function search(e) {
       try {
         let lon = response[0].lon;
         let lat = response[0].lat;
+        cities.push({
+          cityName: city,
+          longitude: lon,
+          latitude: lat,
+        });
         let xhr = new XMLHttpRequest();
         xhr.open(
           "GET",
-          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=6bc236fa8bd5e7e03f83fd8cea3eac74`
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${unit}&appid=6bc236fa8bd5e7e03f83fd8cea3eac74`
         );
         xhr.send();
         xhr.onload = function () {
@@ -43,6 +49,12 @@ function search(e) {
             button.classList.add("x");
             button.addEventListener("click", () => {
               newCard.remove();
+              cities = cities.filter((currentCity) => {
+                if (currentCity.cityName !== city) {
+                  return true;
+                }
+                return false;
+              });
             });
             image.src = iconUrl;
             temps.classList.add("temp");
@@ -69,22 +81,37 @@ function search(e) {
   };
 }
 
+form.addEventListener("submit", search);
+
 let clickState = 0;
 document.querySelector("#btn2").addEventListener("click", change);
 function change() {
-  const temp = document.querySelectorAll(".temp");
-  console.log(temp);
-  clickState++;
-  if (clickState === 1) {
-    temp.forEach((e) => {
-      let num = Number(e.textContent.match(/\d+/)[0]);
-      e.textContent = (num * 9) / 5 + 32 + "°F";
-    });
+  if (unit === "metric") {
+    unit = "imperial";
   } else {
-    temp.forEach((e) => {
-      let num = Number(e.textContent.match(/\d+/)[0]);
-      e.textContent = ((num - 32) * 5) / 9 + "°C";
-      clickState = 0;
-    });
+    unit = "metric";
   }
+  let cardList = document.querySelectorAll(".card");
+  cities.forEach((currentCity) => {
+    let xhr = new XMLHttpRequest();
+    xhr.open(
+      "GET",
+      `https://api.openweathermap.org/data/2.5/weather?lat=${currentCity.latitude}&lon=${currentCity.longitude}&units=${unit}&appid=6bc236fa8bd5e7e03f83fd8cea3eac74`
+    );
+    xhr.send();
+    xhr.onload = function () {
+      if (xhr.status != 200) {
+        alert(`Error ${xhr.status}: ${xhr.statusText}`);
+      } else {
+        const response = JSON.parse(this.responseText);
+        const newTemp = Math.round(response.main.temp);
+        const tempSuffix = unit === "metric" ? "°C" : "°F";
+        cardList.forEach((card) => {
+          if (card.querySelector(".city").innerText == currentCity.cityName) {
+            card.querySelector(".temp").innerText = newTemp + tempSuffix;
+          }
+        });
+      }
+    };
+  });
 }

@@ -146,3 +146,15 @@ margin-left: 20px;
     }
 }
 
+#btn2{
+    background-color: rgb(241, 96, 96);
+    border:none;
+    border-radius: 6%;
+    color:white;
+    padding:7px;
+    font-size: small;
+}
+
+#btn2:hover{
+    cursor:pointer;
+}
