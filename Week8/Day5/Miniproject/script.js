@@ -68,3 +68,23 @@ function search(e) {
     form.search.value = "";
   };
 }
+
+let clickState = 0;
+document.querySelector("#btn2").addEventListener("click", change);
+function change() {
+  const temp = document.querySelectorAll(".temp");
+  console.log(temp);
+  clickState++;
+  if (clickState === 1) {
+    temp.forEach((e) => {
+      let num = Number(e.textContent.match(/\d+/)[0]);
+      e.textContent = (num * 9) / 5 + 32 + "°F";
+    });
+  } else {
+    temp.forEach((e) => {
+      let num = Number(e.textContent.match(/\d+/)[0]);
+      e.textContent = ((num - 32) * 5) / 9 + "°C";
+      clickState = 0;
+    });
+  }
+}
