@@ -58,7 +58,7 @@ function toJs(jsonObj) {
 
 function toMorse(jsObj) {
   return new Promise((resolve, reject) => {
-    let word = prompt("Enter a word or Sentence");
+    let word = prompt("Enter a word or Sentence").toLowerCase();
     let wordSplit = word.split("");
     let newArr = [];
     wordSplit.forEach((letter) => {
@@ -70,19 +70,20 @@ function toMorse(jsObj) {
     });
     resolve(newArr);
   });
-  // .then((res) => {
-  //   console.log(res);
-  // })
-  // .catch((rej) => {
-  //   console.log(rej);
-  // });
 }
 
 function joinWords(morseTranslation) {
   const body = document.querySelector("body");
   morseTranslation.forEach((morseLetter) => {
     let newP = document.createElement("p");
-    newP.innerText = morseLetter;
+    newP.textContent = morseLetter;
     body.append(newP);
   });
 }
+
+toJs(morse)
+  .then((res) => toMorse(res))
+  .then((res) => joinWords(res))
+  .catch((err) => console.log(err));
+
+//Thank you for the help here Adane, hope its done well....
