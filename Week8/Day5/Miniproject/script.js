@@ -83,7 +83,6 @@ function search(e) {
 
 form.addEventListener("submit", search);
 
-let clickState = 0;
 document.querySelector("#btn2").addEventListener("click", change);
 function change() {
   if (unit === "metric") {
