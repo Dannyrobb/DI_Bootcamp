@@ -32,15 +32,3 @@ form.addEventListener("submit", async (e) => {
     });
   });
 });
-
-// const xhr = new XMLHttpRequest();
-
-// xhr.open("GET", "https://api.sunrise-sunset.org/json?lat=48.864716&lng=2.349014");
-// xhr.send();
-// xhr.onload = function () {
-//   if (xhr.status != 200) {
-//     console.log("Error");
-//   } else {
-//     console.log(JSON.parse(this.responseText));
-//   }
-// };
