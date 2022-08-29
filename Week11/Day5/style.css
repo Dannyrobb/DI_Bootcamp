@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:serif;
+}
+
+h1{
+    font-size: 100px;
+    margin-top: 80px;
+}
+
+#container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border:1px solid black;
+    height:100vh;
+   
+}
+
+#form{
+    display:flex;
+    flex-direction: column;
+    margin-top:80px;
+    font-size: 40px;
+    
+}
+
+input{
+    margin:6px;
+    font-size: 30px;
+}
+
+#submit{
+    font-size: 30px;
+}
+
