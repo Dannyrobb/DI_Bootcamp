@@ -3,6 +3,17 @@ let taskListParse = JSON.parse(taskListJson);
 console.log(taskListParse);
 let container = document.getElementById("container");
 
+function compare(a, b) {
+  if (a.start.split(" ")[0] < b.start.split(" ")[0]) {
+    return -1;
+  }
+  if (a.start.split(" ")[0] > b.start.split(" ")[0]) {
+    return 1;
+  }
+  return 0;
+}
+
+taskListParse.sort(compare);
 taskListParse.forEach((element) => {
   let taskCard = document.createElement("div");
   let title = document.createElement("p");
@@ -10,6 +21,13 @@ taskListParse.forEach((element) => {
   let select = document.createElement("select");
   let selectTitle = document.createElement("option");
   let selectDescription = document.createElement("option");
+  let checkBox = document.createElement("input");
+  let checkLabel = document.createElement("label");
+  checkBox.setAttribute("name", "checkbox");
+  checkBox.setAttribute("type", "checkbox");
+  checkBox.setAttribute("id", "checkBox");
+  checkLabel.setAttribute("for", "checkbox");
+  checkLabel.innerText = "Done";
   selectDescription.setAttribute("disabled", true);
   select.setAttribute("id", "description");
   selectTitle.setAttribute("selected", "selected");
@@ -28,7 +46,7 @@ taskListParse.forEach((element) => {
     daysLeft.textContent = combined + " day left to complete this task";
   }
   container.append(taskCard);
-  taskCard.append(title, startDate, daysLeft, select);
+  taskCard.append(checkBox, checkLabel, title, startDate, daysLeft, select);
   select.append(selectTitle, selectDescription);
   console.log(element);
 });

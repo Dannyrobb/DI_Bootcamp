@@ -7,8 +7,8 @@
 
 .card{
     border:black solid 1px;
-    height: 130px;
-    width:300px;
+    min-height: 130px;
+    min-width:300px;
     font-size: 23px;
     margin:30px;
     display:flex;
@@ -56,6 +56,20 @@ option{
 
 select option:first-child { display:none; }
 
+#checkBox{
+    position:absolute;
+    right:30px;
+    top:2px;;
+}
+
+label{
+    position:absolute;
+    right:0px;
+    top:0;
+    font-size: small;
+}
+
+
 @media only screen and (max-width: 600px) {
     .card{
         font-size:18px;
@@ -67,3 +81,4 @@ select option:first-child { display:none; }
         font-size:15px;
     }
 }
+
