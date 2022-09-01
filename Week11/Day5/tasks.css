@@ -18,7 +18,7 @@
     box-shadow: -2px 2px 15px 2px #000000;
     position: relative;
     background-color:#feff9c ;
-    
+    ;
 }
 
 #outer{
@@ -69,6 +69,11 @@ label{
     font-size: small;
 }
 
+#deleteBtn{
+    position:absolute;
+    left:0;
+    top:0;
+}
 
 @media only screen and (max-width: 600px) {
     .card{

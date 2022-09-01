@@ -1,4 +1,4 @@
-let taskArr = [];
+let taskArr = JSON.parse(localStorage.getItem("tasks")) || [];
 let form = document.getElementById("form");
 
 class Task {
@@ -26,13 +26,9 @@ function toLocalStorage() {
   let description = document.getElementById("description").value;
   let start = document.getElementById("startDate").value;
   let end = document.getElementById("endDate").value;
-  let newTask = createTask(taskName, description, start, end, "false");
-  if (localStorage.getItem("tasks") == null) {
-    localStorage.setItem("tasks", "[]");
-  }
-  let oldArr = JSON.parse(localStorage.getItem("tasks"));
-  oldArr.push(newTask);
-  localStorage.setItem("tasks", JSON.stringify(oldArr));
+  let newTask = createTask(taskName, description, start, end, false);
+  taskArr.push(newTask);
+  localStorage.setItem("tasks", JSON.stringify(taskArr));
 }
 
 document.getElementById("submit").addEventListener("click", toLocalStorage);
