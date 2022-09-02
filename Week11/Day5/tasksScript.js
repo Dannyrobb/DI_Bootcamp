@@ -33,13 +33,42 @@ taskArr.sort(compare);
 taskArr.forEach((element, i) => {
   //title
   let title = createParagraph(`Task Name: ${element.title}`);
+  title.addEventListener("dblclick", (e) => {
+    let userInput = prompt(`Change title to:`);
+    if (userInput !== null) {
+      taskArr[i].title = userInput;
+      localStorage.setItem("tasks", JSON.stringify(taskArr));
+      window.location.reload();
+    }
+  });
 
   //dates
-  let start = new Date(element.start.split(" ")[0]);
+  var today = new Date();
   let end = new Date(element.end.split(" ")[0]);
-  let combined = ((start.getTime() - end.getTime()) / (1000 * 3600 * 24)) * -1;
+  let combined = Math.round(((today.getTime() - end.getTime()) / (1000 * 3600 * 24)) * -1);
   let startDate = createParagraph(`Start Date: ${element.start}`);
-  let daysLeft = createParagraph(combined + " days left to complete this task");
+  let daysLeft;
+  if (combined > 0) {
+    daysLeft = createParagraph(combined + " days left to complete this task");
+  } else {
+    daysLeft = createParagraph(combined * -1 + " days since end date");
+  }
+  startDate.addEventListener("dblclick", (e) => {
+    let userInput = prompt(`Change start date to:`);
+    if (userInput !== null) {
+      taskArr[i].start = userInput;
+      localStorage.setItem("tasks", JSON.stringify(taskArr));
+      window.location.reload();
+    }
+  });
+  daysLeft.addEventListener("dblclick", (e) => {
+    let userInput = prompt(`Change end date to:(yyyy/mm/dd format)`);
+    if (userInput !== null) {
+      taskArr[i].end = new Date(userInput.split("T")[0]);
+      localStorage.setItem("tasks", JSON.stringify(taskArr));
+      window.location.reload();
+    }
+  });
 
   //card
   let taskCard = document.createElement("div");
@@ -53,10 +82,20 @@ taskArr.forEach((element, i) => {
   //select
   let select = document.createElement("select");
   select.setAttribute("id", "description");
+  select.addEventListener("dblclick", (e) => {
+    let userInput = prompt(`Change description to:`);
+    if (userInput !== null) {
+      taskArr[i].description = userInput;
+      localStorage.setItem("tasks", JSON.stringify(taskArr));
+      window.location.reload();
+    }
+  });
 
+  //select title option
   let selectTitle = createOption("Description");
   selectTitle.setAttribute("selected", "selected");
 
+  //select description option
   let selectDescription = createOption(element.description);
   selectDescription.setAttribute("disabled", true);
 
@@ -85,7 +124,23 @@ taskArr.forEach((element, i) => {
   checkBox.addEventListener("change", function () {
     taskArr[i].done = this.checked;
     localStorage.setItem("tasks", JSON.stringify(taskArr));
+    if (taskArr[i].done) {
+      taskCard.setAttribute("id", "green");
+    } else if (combined < 1) {
+      taskCard.setAttribute("id", "red");
+    } else {
+      taskCard.setAttribute("id", "orange");
+    }
   });
+
+  //color on reload
+  if (taskArr[i].done) {
+    taskCard.setAttribute("id", "green");
+  } else if (combined < 1) {
+    taskCard.setAttribute("id", "red");
+  } else {
+    taskCard.setAttribute("id", "orange");
+  }
 
   //append
   container.append(taskCard);

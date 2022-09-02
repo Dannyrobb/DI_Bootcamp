@@ -75,6 +75,17 @@ label{
     top:0;
 }
 
+#green{
+    background-color: green;
+}
+
+#red{
+    background-color: red;
+}
+
+#orange{
+    background-color: orange;
+}
 @media only screen and (max-width: 600px) {
     .card{
         font-size:18px;
