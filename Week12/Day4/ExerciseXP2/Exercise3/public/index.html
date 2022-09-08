@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; align-items: center">
+      <h1 style="color: blue">I shall serve this HTML file</h1>
+      <button style="background-color: yellow; width: 30px; height: 30px; cursor: pointer"></button>
+    </div>
+
+    <script>
+      const quotes = [
+        "Adults are always asking children what they want to be when they grow up because they're looking for ideas.",
+
+        "A perfect parent is a person with excellent child-rearing theories and no actual children.",
+
+        "Just be good and kind to your children. Not only are they the future of the world, they're the ones who can sign you into a home.",
+
+        "When I was a kid my parents moved a lot, but I always found them.",
+      ];
+      function random() {
+        return Math.floor(Math.random() * 4);
+      }
+
+      const button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        alert(quotes[random()]);
+      });
+    </script>
+  </body>
+</html>
