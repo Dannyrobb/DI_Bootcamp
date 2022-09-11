@@ -24,7 +24,6 @@ app.get("/form", (req, res) => {
 });
 
 app.post("/formdata", (req, res) => {
-  console.log(req.body.email);
   res.send(`You got a message from ${req.body.email} saying:"${req.body.message}"`);
 });
 
