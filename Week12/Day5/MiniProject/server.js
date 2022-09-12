@@ -14,7 +14,5 @@ app.post("/shoppinglist", (req, res) => {
   shopping.push(req.body);
   console.log(shopping);
   res.json(shopping);
-  //   res.send(`${req.body.item} : ${req.body.amount}`);
-  //   res.send(shopping[0].item + " " + shopping[0].amount + "<br>");
 });
 app.listen(3000);
