@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body>
+    <%- include('../partials/header'); %>
+    <form id="search">
+      <input type="text" placeholder="search by title..." name="titleSearch" id="titleSearch" />
+    </form>
+    <form id="catagories">
+      <select id="catagories" name="catagories"></select>
+    </form>
+    <%- include('../partials/posts'); %> <%- include('../partials/footer'); %>
+  </body>
+</html>
