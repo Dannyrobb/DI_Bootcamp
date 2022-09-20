@@ -4,7 +4,12 @@
     <%- include('../partials/head'); %>
   </head>
   <body>
-    <%- include('../partials/header'); %> <%-feed %>
+    <%- include('../partials/header'); %> <% let str = ''; feed.forEach(item =>{ str+= `
+    <div>
+      <h2>${item.title}</h2>
+      <p>${item.contentSnippet}</p>
+    </div>
+    ` }) %> <%- str %>
     <div class="posts"><%- include('../partials/posts'); %></div>
     <%- include('../partials/footer'); %>
   </body>

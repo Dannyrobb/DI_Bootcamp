@@ -7,10 +7,20 @@
     <%- include('../partials/header'); %>
     <form id="search">
       <input type="text" placeholder="search by title..." name="titleSearch" id="titleSearch" />
+      <button id="button">Search..</button>
     </form>
     <form id="catagories">
       <select id="catagories" name="catagories"></select>
     </form>
-    <%- include('../partials/posts'); %> <%- include('../partials/footer'); %>
+    <%- include('../partials/posts'); %> <%let newArray=feed.filter(item => item.title==='What Is Metabolism?') ; console.log(newArray) %>
+    <%- include('../partials/footer'); %>
+    <script>
+      let btn = document.getElementById("button");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let title = document.getElementById("titleSearch").value;
+        console.log(title);
+      });
+    </script>
   </body>
 </html>
