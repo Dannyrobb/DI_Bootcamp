@@ -30,7 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="flex justify-center items-center flex-column vh-100 ba">
-        <p>Quote: {this.state.quotes.quote}</p>
+        <h1>Quote: {this.state.quotes.quote}</h1>
         <p>-Author: {this.state.quotes.author.length === 0 ? "Anonymous" : this.state.quotes.author}</p>
         <button className="f6 link dim br-pill ba bw2 ph3 pv2 mb2 dib light-purple h3" onClick={this.randomQuote}>
           New Quote
