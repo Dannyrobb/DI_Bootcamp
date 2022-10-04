@@ -6,13 +6,16 @@ import Garage from "./Components/Garage";
 import Events from "./Components/Events";
 import Phone from "./Components/Phone";
 import Color from "./Components/Color";
-const carinfo = { name: "Ford", model: "Mustang" };
+const carinfo = [
+  { name: "Ford", model: "Mustang" },
+  { name: "Mazda", model: "6" },
+];
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      info: [carinfo],
+      info: carinfo,
       color: "blue",
       size: "small",
       isToggle: true,
