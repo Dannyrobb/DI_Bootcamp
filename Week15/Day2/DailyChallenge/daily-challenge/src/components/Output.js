@@ -9,6 +9,7 @@ class Output extends React.Component {
   render() {
     return (
       <div id="output">
+        <h1>Your Information:</h1>
         <p name="name">{this.props.yourname}</p>
 
         <p name="yourage">{this.props.yourage}</p>
