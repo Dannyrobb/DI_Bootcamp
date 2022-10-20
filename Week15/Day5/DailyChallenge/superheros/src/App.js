@@ -7,16 +7,31 @@ const data = require("./components/characters.json");
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { highScore: 0, currentScore: 0, Clicked: false };
+    this.state = { highScore: 0, currentScore: 0, Clicked: false, data };
   }
 
-  componentDidMount() {
-    console.log(data.superheroes);
-  }
+  randomiseArray = (array) => {
+    let currentIndex = array.length,
+      randomIndex;
+
+    while (currentIndex != 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
+  };
+
+  shuffleArray = () => {
+    const shuffledArr = this.randomiseArray(this.state.data.superheroes);
+    console.log(shuffledArr);
+  };
 
   handleClick = (id) => {
     this.handleScore(id);
-    console.log(this.state.timesClicked);
+    this.shuffleArray(this.state.data);
   };
 
   handleIncrement = () => {
@@ -24,7 +39,7 @@ class App extends React.Component {
   };
 
   handleScore = (id) => {
-    data.superheroes.forEach((element) => {
+    this.state.data.superheroes.forEach((element) => {
       if (id === element.id && element.clicked === false) {
         element.clicked = true;
         this.setState({ Clicked: false });
@@ -35,8 +50,8 @@ class App extends React.Component {
         }
         this.setState({ currentScore: 0 });
         this.setState({ Clicked: true });
-        this.state.characters.forEach((element) => (element.clicked = false));
-        console.log(this.state.characters);
+        this.state.data.superheroes.forEach((element) => (element.clicked = false));
+        console.log(this.state.data.superheroes);
       }
     });
   };
@@ -46,7 +61,7 @@ class App extends React.Component {
       <div>
         <Navbar currentScore={this.state.currentScore} highScore={this.state.highScore} />
         <div className="cardContainer">
-          {data.superheroes.map((hero) => {
+          {this.state.data.superheroes.map((hero) => {
             return (
               <Cards
                 id={hero.id}
