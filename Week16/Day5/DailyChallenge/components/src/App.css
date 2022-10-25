@@ -1,0 +1,10 @@
+body{
+  background-color: rgb(5, 159, 243);
+}
+
+.App {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
